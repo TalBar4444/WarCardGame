@@ -13,6 +13,7 @@
 		CC0782B82C68E0F700427732 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC0782B62C68E0F700427732 /* Main.storyboard */; };
 		CC0782BA2C68E0F800427732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC0782B92C68E0F800427732 /* Assets.xcassets */; };
 		CC0782BD2C68E0F800427732 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC0782BB2C68E0F800427732 /* LaunchScreen.storyboard */; };
+		CC4EC4092C69368500890D49 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4EC4082C69368500890D49 /* GameController.swift */; };
 		CCAB9D8C2C6901EC00BEE835 /* MyExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB9D8B2C6901EC00BEE835 /* MyExtentions.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		CC0782B92C68E0F800427732 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC0782BC2C68E0F800427732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC0782BE2C68E0F800427732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC4EC4082C69368500890D49 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		CCAB9D8B2C6901EC00BEE835 /* MyExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExtentions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 				CC0782B92C68E0F800427732 /* Assets.xcassets */,
 				CC0782BB2C68E0F800427732 /* LaunchScreen.storyboard */,
 				CC0782BE2C68E0F800427732 /* Info.plist */,
+				CC4EC4082C69368500890D49 /* GameController.swift */,
 			);
 			path = WarCardGame;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCAB9D8C2C6901EC00BEE835 /* MyExtentions.swift in Sources */,
+				CC4EC4092C69368500890D49 /* GameController.swift in Sources */,
 				CC0782B52C68E0F700427732 /* ViewController.swift in Sources */,
 				CC0782B12C68E0F700427732 /* AppDelegate.swift in Sources */,
 				CC0782B32C68E0F700427732 /* SceneDelegate.swift in Sources */,
