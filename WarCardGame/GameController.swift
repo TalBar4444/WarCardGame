@@ -11,7 +11,8 @@ class GameController: UIViewController {
     
     @IBOutlet weak var game_LBL_time: UILabel!
     
-    var gameModel = GameModel()
+    @IBOutlet weak var game_BTN_switch: UIButton!
+    var gameManager = GameManager()
     var gameTimer: Timer?
     
     override func viewDidLoad() {
@@ -19,42 +20,38 @@ class GameController: UIViewController {
         startGame()
     }
     
+//    @IBAction func switchCards(_ sender: Any) {
+//    }
     func startGame() {
-        let values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
-        
-        for value in values {
-            let card = Card(image: cardImage, value: value)
-            deck.append(card)
+        if gameManager.isGameOver() {
+            let winner = gameManager.getWinner()
+            print(winner)
         }
-        gameModel.deck = deck.shuffled()
+        
+        updateScoreLabel()
         gameTimer = Timer.scheduledTimer(timeInterval: 5.0,target: self, selector: #selector(playRound), userInfo: nil, repeats: true)
     }
     
     @objc func playRound() {
-        let leftCard = gameModel.deck.removeFirst()
-        let rightCard = gameModel.deck.removeFirst();
+        let leftCard = gameManager.leftPlayer.getCardName()
+        let rightCard = gameManager.rightPlayer.getCardName()
         
         // Update card image views
-        game_IMG_leftCard.image = leftCard.image
-        game_IMG_rightCard.image = rightCard.image
-        
-        if leftCard.value > rightCard.value {
-            gameModel.leftScore += 1
-        } else if rightCard.value > leftCard.value {
-            gameModel.rightScore += 1
-            
-        }
-        
-        //Update score labels
-        game_LBL_leftScore.text = "\(gameModel.leftScore)"
-        game_LBL_rightScore.text = "\(gameModel.rightScore)"
-        
-        gameModel.currentRound += 1
-        game_LBL_time.text = "\(gameModel.currentRound)"
+        game_IMG_leftCard.image = UIImage(named: leftCard)
+        game_IMG_rightCard.image = UIImage(named: rightCard)
+
+        game_LBL_time.text = "\(gameManager.round)"
+        gameManager.makeTurn()
+        updateScoreLabel()
         
         //checkfor game over
-        if gameModel.currentRound == 10 {
+        if gameManager.isGameOver() {
             gameTimer?.invalidate()
         }
+    }
+    
+    func updateScoreLabel(){
+        game_LBL_leftScore.text = " \(gameManager.leftPlayer.getScore())"
+        game_LBL_rightScore.text = " \(gameManager.rightPlayer.getScore())"
     }
 }

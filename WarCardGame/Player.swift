@@ -9,10 +9,13 @@ import Foundation
 
 class Player{
     var name: String
+    var score: Int
     var cards: [Card]
     
-    init(name: String, cards: [Card]){
+    
+    init(name: String, score: Int, cards: [Card]){
         self.name = name
+        self.score = score
         self.cards = cards
         self.cards.shuffle()
     }
@@ -31,7 +34,7 @@ class Player{
     }
     
     func getScore() -> Int{
-        return self.cards.count
+        return self.score
     }
     
     func getCardScore() -> Int{

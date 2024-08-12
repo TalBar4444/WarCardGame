@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0180AD3C-33C6-486D-859D-7DE9D738D980"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WarCardGame/GameController.swift"
@@ -18,6 +18,158 @@
             endingLineNumber = "12"
             landmarkName = "GameController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "0180AD3C-33C6-486D-859D-7DE9D738D980 - a0845f1b2b22b298"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WarCardGame.GameController.game_LBL_time.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "WarCardGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student31/Documents/WarCardGame/WarCardGame/GameController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "0180AD3C-33C6-486D-859D-7DE9D738D980 - 8d1922e8c6c99694"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WarCardGame.GameController.game_LBL_time.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "WarCardGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student31/Documents/WarCardGame/WarCardGame/GameController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "0180AD3C-33C6-486D-859D-7DE9D738D980 - 8725d24c1203f9a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WarCardGame.GameController.game_LBL_time.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "WarCardGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student31/Documents/WarCardGame/WarCardGame/GameController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "0180AD3C-33C6-486D-859D-7DE9D738D980 - 361d85dfed70a54c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WarCardGame.GameController.game_LBL_time.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "WarCardGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student31/Documents/WarCardGame/WarCardGame/GameController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "0180AD3C-33C6-486D-859D-7DE9D738D980 - 2c990d7456155877"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WarCardGame.GameController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; WarCardGame.GameController"
+                  moduleName = "WarCardGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student31/Documents/WarCardGame/WarCardGame/GameController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "304">
+               </Location>
+               <Location
+                  uuid = "0180AD3C-33C6-486D-859D-7DE9D738D980 - e16ea60bc23e52e2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WarCardGame.GameController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;WarCardGame.GameController&gt;"
+                  moduleName = "WarCardGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student31/Documents/WarCardGame/WarCardGame/GameController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  uuid = "0180AD3C-33C6-486D-859D-7DE9D738D980 - 2c990d7456155835"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WarCardGame.GameController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; WarCardGame.GameController"
+                  moduleName = "WarCardGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student31/Documents/WarCardGame/WarCardGame/GameController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "296">
+               </Location>
+               <Location
+                  uuid = "0180AD3C-33C6-486D-859D-7DE9D738D980 - e16ea60bc23e52a0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WarCardGame.GameController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;WarCardGame.GameController&gt;"
+                  moduleName = "WarCardGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student31/Documents/WarCardGame/WarCardGame/GameController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "0180AD3C-33C6-486D-859D-7DE9D738D980 - 2c990d7456155814"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WarCardGame.GameController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; WarCardGame.GameController"
+                  moduleName = "WarCardGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student31/Documents/WarCardGame/WarCardGame/GameController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  uuid = "0180AD3C-33C6-486D-859D-7DE9D738D980 - e16ea60bc23e5281"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WarCardGame.GameController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;WarCardGame.GameController&gt;"
+                  moduleName = "WarCardGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student31/Documents/WarCardGame/WarCardGame/GameController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "256">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
