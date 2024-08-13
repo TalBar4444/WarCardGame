@@ -123,7 +123,7 @@ class GameManager{
 //    }
     
     func isGameOver() -> Bool{
-        return self.leftPlayer.cards.count == 0 || self.rightPlayer.cards.count == 0 || self.round == 10 //MAX_TURNS
+        return self.leftPlayer.cards.count == 0 || self.rightPlayer.cards.count == 0 || self.round == 3 //MAX_TURNS
     }
     
     

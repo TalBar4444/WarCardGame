@@ -2,10 +2,9 @@
 //  EndController.swift
 //  WarCardGame
 //
-//  Created by Tal Bar on 13/08/2024.
+//  Created by Student31 on 14/08/2024.
 //
 
-import Foundation
 import UIKit
 
 class EndController: UIViewController {
@@ -26,8 +25,20 @@ class EndController: UIViewController {
     
     @IBAction func backToMenu(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let ViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController {
-            self.present(ViewController, animated: true, completion: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController {
+            self.present(vc, animated: true, completion: nil)
         }
     }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }

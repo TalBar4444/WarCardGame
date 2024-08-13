@@ -75,8 +75,8 @@ class GameController: UIViewController {
         UserDefaults.standard.set(winner.getName(), forKey: "winnerName")
         UserDefaults.standard.set(winner.getScore(), forKey: "winnerScore")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let EndController = storyboard.instantiateViewController(withIdentifier: "EndController") as? EndController {
-            self.present(EndController, animated: true, completion: nil)
+        if let endController = storyboard.instantiateViewController(withIdentifier: "EndController") as? EndController {
+            self.present(endController, animated: true, completion: nil)
         }
     }
     
