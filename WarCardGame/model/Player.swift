@@ -41,8 +41,14 @@ class Player{
         return self.cards[0].value
     }
     
+    func getName() -> String{
+        return self.name
+    }
+    
     func setName(name: String){
         self.name = name
     }
+    
+    
     
 }

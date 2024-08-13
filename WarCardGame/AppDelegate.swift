@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  WarCardGame
 //
-//  Created by Student31 on 11/08/2024.
+//  Created by Tal Bar on 11/08/2024.
 //
 
 import UIKit
