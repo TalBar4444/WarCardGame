@@ -11,7 +11,6 @@ class GameController: UIViewController {
     
     @IBOutlet weak var game_LBL_time: UILabel!
     
-    @IBOutlet weak var game_BTN_switch: UIButton!
     var gameManager = GameManager()
     var gameTimer: Timer?
     
@@ -28,6 +27,7 @@ class GameController: UIViewController {
             print(winner)
         }
         
+        
         updateScoreLabel()
         gameTimer = Timer.scheduledTimer(timeInterval: 5.0,target: self, selector: #selector(playRound), userInfo: nil, repeats: true)
     }
@@ -40,8 +40,8 @@ class GameController: UIViewController {
         game_IMG_leftCard.image = UIImage(named: leftCard)
         game_IMG_rightCard.image = UIImage(named: rightCard)
 
-        game_LBL_time.text = "\(gameManager.round)"
-        gameManager.makeTurn()
+        
+        gameManager.calcScore()
         updateScoreLabel()
         
         //checkfor game over
@@ -53,5 +53,6 @@ class GameController: UIViewController {
     func updateScoreLabel(){
         game_LBL_leftScore.text = " \(gameManager.leftPlayer.getScore())"
         game_LBL_rightScore.text = " \(gameManager.rightPlayer.getScore())"
+        game_LBL_time.text = "\(gameManager.round)"
     }
 }

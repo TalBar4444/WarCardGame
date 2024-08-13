@@ -30,10 +30,7 @@ class GameManager{
             Card(value: 11, image: "card11"),
             Card(value: 12, image: "card12"),
             Card(value: 13, image: "card13"),
-            Card(value: 14, image: "card14"),
-            Card(value: 15, image: "joker")
-            
-            ]
+            Card(value: 14, image: "card14")]
         
         // split the cards between the players
         //let half = self.cards.count / 2
@@ -49,14 +46,14 @@ class GameManager{
     
 //    func makeTurn() -> Direction{
 //        var direction = Direction.default_direction
-    func makeTurn() {
+    func calcScore() {
         
         let left_open_card = self.leftPlayer.getCard()
         let right_open_card = self.rightPlayer.getCard()
         
         if left_open_card.value > right_open_card.value {
             leftPlayer.score += 1
-            self.round += 1
+            
 //            self.leftPlayer.addCards(cards: [left_open_card, right_open_card])
             //direction = Direction.player_left_direction
         }
@@ -68,10 +65,11 @@ class GameManager{
 //        {
         else if right_open_card.value > left_open_card.value {
             rightPlayer.score += 1
-            self.round += 1
+        
 //            self.rightPlayer.addCards(cards: [left_open_card, right_open_card])
             //direction = Direction.player_right_direction
         }
+        self.round += 1
 //        else
 //        {
 //            // reset the war cards
