@@ -73,11 +73,6 @@
 				CC0782B92C68E0F800427732 /* Assets.xcassets */,
 				CC0782BB2C68E0F800427732 /* LaunchScreen.storyboard */,
 				CC0782BE2C68E0F800427732 /* Info.plist */,
-				CC4EC4082C69368500890D49 /* GameController.swift */,
-				CC0782B42C68E0F700427732 /* ViewController.swift */,
-				CC98BB992C6A47580070FC01 /* GameManager.swift */,
-				CC98BB9B2C6A48F30070FC01 /* Player.swift */,
-				CC98BB952C6A3A210070FC01 /* Card.swift */,
 				CC997A2E2C6B8B2100CC7337 /* controller */,
 				CC997A2D2C6B8AFC00CC7337 /* model */,
 			);
@@ -87,6 +82,9 @@
 		CC997A2D2C6B8AFC00CC7337 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				CC98BB992C6A47580070FC01 /* GameManager.swift */,
+				CC98BB9B2C6A48F30070FC01 /* Player.swift */,
+				CC98BB952C6A3A210070FC01 /* Card.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -94,6 +92,8 @@
 		CC997A2E2C6B8B2100CC7337 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				CC4EC4082C69368500890D49 /* GameController.swift */,
+				CC0782B42C68E0F700427732 /* ViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
