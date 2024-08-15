@@ -6,39 +6,110 @@
 //
 
 import UIKit
+import Foundation
+import CoreLocation
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var main_LAY_name: UIStackView!
+    
+    @IBOutlet weak var main_EDT_name: UITextField!
     @IBOutlet weak var main_BTN_insertName: UIButton!
-    @IBOutlet weak var main_LBL_start: UIButton!
     
     @IBOutlet weak var main_LBL_name: UILabel!
     
-   
+    @IBOutlet weak var main_LBL_start: UIButton!
+    
+    var name: String = ""
+    
+    let locationManager = CLLocationManager()
+       
+    var locationPermission: CLLocationCoordinate2D? = nil
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
-        main_LBL_name.isHidden = true
-    }
-
-    @IBAction func openMainActivity(_ sender: UIButton) {
-        main_LBL_name.text = "Hello Tal"
+        getCurrentLocation()
+        
+        if let name = UserDefaults.standard.string(forKey: "name") {
+            self.name = name
+            main_LBL_name.text = "Hello, \(name)"
+            main_LAY_name.isHidden = true
+            //displayGreeting(name: name)
+            
+        }
     }
     
-//    @IBAction func insertName(_ sender: Any) {
-//        let popUpVC = NamePopUpViewController()
-//    }
-//
-//    func displayGreeting(name: String) {
-//        main_LBL_name.text = "Hi, \(name)!"
-//        main_LBL_name.isHidden = false
-//        main_BTN_insertName.isHidden = true
-//    }
+    
+    @IBAction func insertName(_ sender: UIButton) {
+        print("tal0")
+        if main_EDT_name.hasText {
+            name = main_EDT_name.text!
+            main_LBL_name.text = "Hello, \(main_EDT_name.text!)"
+            main_LAY_name.isHidden = true
+            //displayGreeting(name: name)
+        }
+    }
+    @IBAction func openMainActivity(_ sender: UIButton) {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        if let GameController = storyboard.instantiateViewController(withIdentifier: "GameController") as? GameController {
+            
+            if name.isEmpty {
+                let alert = UIAlertController(title: "Error", message: "Please Enter a name", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true)
+            }
+            
+            if locationPermission == nil {
+                let alert = UIAlertController(title: "Error", message: "Please allow location services", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true)
+            }
+            
+            UserDefaults.standard.set(name, forKey: "name")
+            
+            UserDefaults.standard.set(locationPermission?.longitude, forKey: "longitude")
+//            self.present(GameController, animated: false, completion: nil)
+        }
+        
+        
+
+    func getCurrentLocation() {
+        self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        let myQueue = DispatchQueue(label:"myOwnQueue")
+        myQueue.async {
+          if CLLocationManager.locationServicesEnabled() {
+              self.locationManager.delegate = self
+              self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+              self.locationManager.startUpdatingLocation()
+          }
+        }
+
+    }
+
 }
 
-//extension ViewController: NamePopUpViewControllerDelegate {
-//    func didEnterName(name: String) {
-//        displayGreeting(name: name)
-//    }
-//}
+extension ViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locationValie: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        locationPermission = locationValie
+        
+        
+//        if locationPermission!.longitude > CENTER_Y_CONSTRAINT {
+//            UIImageView_leftErath.isHidden = true
+//            UIImageView_rightErath.isHidden = false
+//        } else {
+//            UIImageView_leftErath.isHidden = false
+//            UIImageView_rightErath.isHidden = true
+//        }
+        
+        
+        print("locations = \(locationValie.latitude) \(locationValie.longitude)")
+        
+    }
+}
+
 

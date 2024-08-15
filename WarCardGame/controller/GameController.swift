@@ -67,19 +67,27 @@ class GameController: UIViewController {
         game_LBL_time.text = "\(gameManager.round)"
     }
     
+    deinit {
+        gameTimer?.invalidate()
+        gameTimer = nil
+    }
+    
     func endGame(){
+    
+        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.dismiss(animated: true, completion: nil)
         
 //        performSegue(withIdentifier: "gameOver", sender: self)
         let winner = gameManager.getWinner()
 
         UserDefaults.standard.set(winner.getName(), forKey: "winnerName")
         UserDefaults.standard.set(winner.getScore(), forKey: "winnerScore")
-        let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EndController") as! EndController
-        self.navigationController?.pushViewController(storyboard, animated: true)
-        
-    
-        //        self.present(storyboard, animated: false, completion: nil)
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let EndController = storyboard.instantiateViewController(withIdentifier: "EndController") as? EndController {
+            self.navigationController?.pushViewController(EndController, animated: true)
+        }
+//            .instantiateViewController(withIdentifier: "EndController") as! EndController
+//        self.navigationController?.pushViewController(storyboard, animated: true)
         
 //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
 //        if let endController = storyboard.instantiateViewController(withIdentifier: "EndController") as? EndController {

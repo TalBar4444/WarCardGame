@@ -18,7 +18,6 @@
 		CC98BB9A2C6A47580070FC01 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC98BB992C6A47580070FC01 /* GameManager.swift */; };
 		CC98BB9C2C6A48F30070FC01 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC98BB9B2C6A48F30070FC01 /* Player.swift */; };
 		CC997A322C6C06AE00CC7337 /* EndController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC997A312C6C06AE00CC7337 /* EndController.swift */; };
-		CC997A342C6C0B9500CC7337 /* NamePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC997A332C6C0B9500CC7337 /* NamePopUpViewController.swift */; };
 		CCAB9D8C2C6901EC00BEE835 /* MyExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB9D8B2C6901EC00BEE835 /* MyExtentions.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +35,6 @@
 		CC98BB992C6A47580070FC01 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		CC98BB9B2C6A48F30070FC01 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		CC997A312C6C06AE00CC7337 /* EndController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndController.swift; sourceTree = "<group>"; };
-		CC997A332C6C0B9500CC7337 /* NamePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamePopUpViewController.swift; sourceTree = "<group>"; };
 		CCAB9D8B2C6901EC00BEE835 /* MyExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExtentions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,7 +77,6 @@
 				CC0782BE2C68E0F800427732 /* Info.plist */,
 				CC997A2E2C6B8B2100CC7337 /* controller */,
 				CC997A2D2C6B8AFC00CC7337 /* model */,
-				CC997A332C6C0B9500CC7337 /* NamePopUpViewController.swift */,
 			);
 			path = WarCardGame;
 			sourceTree = "<group>";
@@ -175,7 +172,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC997A342C6C0B9500CC7337 /* NamePopUpViewController.swift in Sources */,
 				CCAB9D8C2C6901EC00BEE835 /* MyExtentions.swift in Sources */,
 				CC98BB9A2C6A47580070FC01 /* GameManager.swift in Sources */,
 				CC4EC4092C69368500890D49 /* GameController.swift in Sources */,

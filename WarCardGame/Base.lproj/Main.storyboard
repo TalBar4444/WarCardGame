@@ -12,7 +12,7 @@
         <!--Game Controller-->
         <scene sceneID="gjK-hE-2ss">
             <objects>
-                <viewController id="Lc9-qJ-QDz" customClass="GameController" customModule="WarCardGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameController" id="Lc9-qJ-QDz" customClass="GameController" customModule="WarCardGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="El6-PZ-SFU">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,20 +198,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUY-Gu-9u6">
-                                <rect key="frame" x="184.33333333333334" y="167.33333333333334" width="61.666666666666657" height="28.666666666666657"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUY-Gu-9u6">
+                                <rect key="frame" x="215" y="167.33333333333334" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoI-Ha-l2j">
-                                <rect key="frame" x="158" y="133" width="114" height="34.333333333333343"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Insert name"/>
-                                <connections>
-                                    <action selector="insertName:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ykg-Mo-2U5"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="fSN-SZ-1y5">
+                                <rect key="frame" x="25" y="133" width="380" height="34.333333333333343"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hpz-wB-d0x">
+                                        <rect key="frame" x="0.0" y="0.0" width="293.66666666666669" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoI-Ha-l2j">
+                                        <rect key="frame" x="315.66666666666669" y="0.0" width="64.333333333333314" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Enter">
+                                            <backgroundConfiguration key="background"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="insertName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hnn-Zj-K5j"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="mRi-s2-vsp">
                                 <rect key="frame" x="16" y="210" width="398" height="512"/>
                                 <subviews>
@@ -242,17 +254,21 @@
                             <constraint firstItem="mRi-s2-vsp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Jdc-Yh-laW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f0k-bg-BlS" secondAttribute="bottom" constant="16" id="NBh-Jy-BGg"/>
                             <constraint firstItem="f0k-bg-BlS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="SRh-lB-wfQ"/>
+                            <constraint firstItem="fSN-SZ-1y5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="VBv-AF-zmp"/>
                             <constraint firstItem="mRi-s2-vsp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="VpL-Ub-c7u"/>
-                            <constraint firstItem="qoI-Ha-l2j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="WgB-je-UQe"/>
-                            <constraint firstItem="NUY-Gu-9u6" firstAttribute="top" secondItem="qoI-Ha-l2j" secondAttribute="bottom" id="Y7C-Yz-kAz"/>
                             <constraint firstItem="NUY-Gu-9u6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jo4-Vr-GYD"/>
+                            <constraint firstItem="fSN-SZ-1y5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="npW-sk-tqA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fSN-SZ-1y5" secondAttribute="trailing" constant="25" id="rnX-T8-TNi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f0k-bg-BlS" secondAttribute="trailing" constant="120" id="rtt-gP-BOc"/>
-                            <constraint firstItem="qoI-Ha-l2j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vah-P9-Wk3"/>
+                            <constraint firstItem="fSN-SZ-1y5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="sS4-tl-klu"/>
+                            <constraint firstItem="NUY-Gu-9u6" firstAttribute="top" secondItem="fSN-SZ-1y5" secondAttribute="bottom" id="ypW-rL-q55"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gMe-V3-GSa"/>
                     <connections>
                         <outlet property="main_BTN_insertName" destination="qoI-Ha-l2j" id="rHD-ff-rFg"/>
+                        <outlet property="main_EDT_name" destination="hpz-wB-d0x" id="oRf-C3-WQa"/>
+                        <outlet property="main_LAY_name" destination="fSN-SZ-1y5" id="4yY-Q9-lSd"/>
                         <outlet property="main_LBL_name" destination="NUY-Gu-9u6" id="qBl-zV-w5z"/>
                         <outlet property="main_LBL_start" destination="f0k-bg-BlS" id="Rru-fH-ZJ8"/>
                     </connections>
