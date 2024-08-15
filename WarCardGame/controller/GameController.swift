@@ -74,10 +74,17 @@ class GameController: UIViewController {
 
         UserDefaults.standard.set(winner.getName(), forKey: "winnerName")
         UserDefaults.standard.set(winner.getScore(), forKey: "winnerScore")
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let endController = storyboard.instantiateViewController(withIdentifier: "EndController") as? EndController {
-            self.present(endController, animated: true, completion: nil)
-        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EndController") as! EndController
+        self.navigationController?.pushViewController(storyboard, animated: true)
+        
+    
+        //        self.present(storyboard, animated: false, completion: nil)
+        
+        
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        if let endController = storyboard.instantiateViewController(withIdentifier: "EndController") as? EndController {
+//            self.present(endController, animated: true, completion: nil)
+//        }
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

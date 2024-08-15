@@ -18,16 +18,16 @@ class EndController: UIViewController {
         
         let name = UserDefaults.standard.string(forKey: "winnerName")
         let score = UserDefaults.standard.string(forKey: "winnerScore")
+        self.navigationItem.setHidesBackButton(true, animated: true)
         
         end_LBL_name.text = name
         end_LBL_score.text = score
     }
     
     @IBAction func backToMenu(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let vc = storyboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController {
-            self.present(vc, animated: true, completion: nil)
-        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        self.navigationController?.pushViewController(storyboard, animated: true)
+        
     }
     
 

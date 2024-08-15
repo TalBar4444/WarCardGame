@@ -118,7 +118,7 @@
         <!--End Controller-->
         <scene sceneID="0JY-Yn-9dc">
             <objects>
-                <viewController id="VIm-fJ-ZQo" customClass="EndController" customModule="WarCardGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EndController" id="VIm-fJ-ZQo" customClass="EndController" customModule="WarCardGame" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e3x-Rd-mzQ">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -193,7 +193,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WarCardGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="WarCardGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
