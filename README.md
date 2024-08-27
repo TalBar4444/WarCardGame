@@ -8,26 +8,6 @@ WarCardGame is a classic card game app where players go head-to-head against the
 - **Automatic Gameplay**: The game progresses automatically, with cards being drawn and compared until one player wins.
 - **Dynamic User Interface**: Combines the power of SwiftUI for modern UI elements with Storyboard for robust navigation and view management.
 
-## Screenshots
-
-(Add screenshots of the app here to showcase the interface.)
-
-## Installation
-
-To install and run WarCardGame on your local machine:
-
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/TalBar4444/WarCardGame.git
-    ```
-
-2. Open the project in Xcode:
-    ```bash
-    open WarCardGame.xcodeproj
-    ```
-
-3. Build and run the app by clicking on the "Run" button in Xcode or pressing `Cmd + R`.
-
 ## Usage
 
 ### Location-Based Player Selection
@@ -62,4 +42,5 @@ WarCardGame uses a combination of SwiftUI and Storyboard:
     See the License for the specific language governing permissions and
     limitations under the License.
 
-Thank you for playing WarCardGame! We hope you enjoy the classic battle of cards against the computer.
+## Credits
+Icon made by Flat Icons (www.flat-icons.com) from www.flaticon.com
