@@ -106,7 +106,9 @@
                     <connections>
                         <outlet property="game_IMG_leftCard" destination="aMk-RU-J5U" id="r4R-QK-5tb"/>
                         <outlet property="game_IMG_rightCard" destination="2EE-zt-hVI" id="hFd-qp-7ur"/>
+                        <outlet property="game_LBL_leftPlayer" destination="ken-bk-Ivd" id="d4Q-KI-UBk"/>
                         <outlet property="game_LBL_leftScore" destination="md7-Jx-eZR" id="91Z-OP-ar3"/>
+                        <outlet property="game_LBL_rightPlayer" destination="L5b-I8-qjx" id="Bdt-3A-MCw"/>
                         <outlet property="game_LBL_rightScore" destination="ru0-Yq-TUF" id="S8X-SX-lmF"/>
                         <outlet property="game_LBL_time" destination="GZU-B0-dFp" id="vN8-b4-8NN"/>
                     </connections>
@@ -225,14 +227,21 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="mRi-s2-vsp">
-                                <rect key="frame" x="16" y="210" width="398" height="512"/>
+                                <rect key="frame" x="43.666666666666657" y="267.33333333333331" width="343" height="399.99999999999994"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="westside" translatesAutoresizingMaskIntoConstraints="NO" id="I4G-f5-mkt">
-                                        <rect key="frame" x="0.0" y="0.0" width="177.66666666666666" height="512"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="400"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="3WN-BO-9wa"/>
+                                            <constraint firstAttribute="height" constant="400" id="BY0-k6-8YY"/>
+                                        </constraints>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eastside" translatesAutoresizingMaskIntoConstraints="NO" id="MWU-gi-oH5">
-                                        <rect key="frame" x="220.66666666666663" y="0.0" width="177.33333333333337" height="512"/>
+                                        <rect key="frame" x="193" y="0.0" width="150" height="400"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="400" id="Vhi-D2-iqt"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                             </stackView>
@@ -249,18 +258,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="mRi-s2-vsp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Hq-tg-NDS"/>
-                            <constraint firstAttribute="trailing" secondItem="mRi-s2-vsp" secondAttribute="trailing" constant="16" id="FW6-jb-g2x"/>
-                            <constraint firstItem="mRi-s2-vsp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Jdc-Yh-laW"/>
+                            <constraint firstItem="mRi-s2-vsp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1WA-2A-SLA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f0k-bg-BlS" secondAttribute="bottom" constant="16" id="NBh-Jy-BGg"/>
                             <constraint firstItem="f0k-bg-BlS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="SRh-lB-wfQ"/>
                             <constraint firstItem="fSN-SZ-1y5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="VBv-AF-zmp"/>
-                            <constraint firstItem="mRi-s2-vsp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="VpL-Ub-c7u"/>
                             <constraint firstItem="NUY-Gu-9u6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jo4-Vr-GYD"/>
                             <constraint firstItem="fSN-SZ-1y5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="npW-sk-tqA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fSN-SZ-1y5" secondAttribute="trailing" constant="25" id="rnX-T8-TNi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f0k-bg-BlS" secondAttribute="trailing" constant="120" id="rtt-gP-BOc"/>
                             <constraint firstItem="fSN-SZ-1y5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="sS4-tl-klu"/>
+                            <constraint firstItem="mRi-s2-vsp" firstAttribute="top" secondItem="fSN-SZ-1y5" secondAttribute="bottom" constant="100" id="xsG-RW-RmB"/>
                             <constraint firstItem="NUY-Gu-9u6" firstAttribute="top" secondItem="fSN-SZ-1y5" secondAttribute="bottom" id="ypW-rL-q55"/>
                         </constraints>
                     </view>
@@ -268,6 +275,8 @@
                     <connections>
                         <outlet property="main_BTN_insertName" destination="qoI-Ha-l2j" id="rHD-ff-rFg"/>
                         <outlet property="main_EDT_name" destination="hpz-wB-d0x" id="oRf-C3-WQa"/>
+                        <outlet property="main_IMG_left" destination="I4G-f5-mkt" id="WfG-WC-31j"/>
+                        <outlet property="main_IMG_right" destination="MWU-gi-oH5" id="7FS-28-peH"/>
                         <outlet property="main_LAY_name" destination="fSN-SZ-1y5" id="4yY-Q9-lSd"/>
                         <outlet property="main_LBL_name" destination="NUY-Gu-9u6" id="qBl-zV-w5z"/>
                         <outlet property="main_LBL_start" destination="f0k-bg-BlS" id="Rru-fH-ZJ8"/>

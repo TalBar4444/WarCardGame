@@ -20,6 +20,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var main_LBL_start: UIButton!
     
+    @IBOutlet weak var main_IMG_left: UIImageView!
+    
+    @IBOutlet weak var main_IMG_right: UIImageView!
+    
     var name: String = ""
     
     let locationManager = CLLocationManager()
@@ -35,9 +39,7 @@ class ViewController: UIViewController {
         if let name = UserDefaults.standard.string(forKey: "name") {
             self.name = name
             main_LBL_name.text = "Hello, \(name)"
-            main_LAY_name.isHidden = true
-            //displayGreeting(name: name)
-            
+            main_LAY_name.isHidden = true        
         }
     }
     
@@ -48,30 +50,27 @@ class ViewController: UIViewController {
             name = main_EDT_name.text!
             main_LBL_name.text = "Hello, \(main_EDT_name.text!)"
             main_LAY_name.isHidden = true
-            //displayGreeting(name: name)
         }
     }
+    
     @IBAction func openMainActivity(_ sender: UIButton) {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        if let GameController = storyboard.instantiateViewController(withIdentifier: "GameController") as? GameController {
-            
-            if name.isEmpty {
-                let alert = UIAlertController(title: "Error", message: "Please Enter a name", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                self.present(alert, animated: true)
-            }
-            
-            if locationPermission == nil {
-                let alert = UIAlertController(title: "Error", message: "Please allow location services", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                self.present(alert, animated: true)
-            }
-            
-            UserDefaults.standard.set(name, forKey: "name")
-            
-            UserDefaults.standard.set(locationPermission?.longitude, forKey: "longitude")
-//            self.present(GameController, animated: false, completion: nil)
+        
+        if name.isEmpty {
+            let alert = UIAlertController(title: "Error", message: "Please Enter a name", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true)
         }
+        
+        if locationPermission == nil {
+            let alert = UIAlertController(title: "Error", message: "Please allow location services", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }
+        
+        UserDefaults.standard.set(name, forKey: "name")
+        
+        UserDefaults.standard.set(locationPermission?.longitude, forKey: "longitude")
+    }
         
         
 
@@ -98,13 +97,13 @@ extension ViewController: CLLocationManagerDelegate {
         locationPermission = locationValie
         
         
-//        if locationPermission!.longitude > CENTER_Y_CONSTRAINT {
-//            UIImageView_leftErath.isHidden = true
-//            UIImageView_rightErath.isHidden = false
-//        } else {
-//            UIImageView_leftErath.isHidden = false
-//            UIImageView_rightErath.isHidden = true
-//        }
+        if locationPermission!.longitude > CENTER_Y{
+            main_IMG_left.isHidden = true
+            main_IMG_right.isHidden = false
+        } else {
+            main_IMG_left.isHidden = false
+            main_IMG_right.isHidden = true
+        }
         
         
         print("locations = \(locationValie.latitude) \(locationValie.longitude)")

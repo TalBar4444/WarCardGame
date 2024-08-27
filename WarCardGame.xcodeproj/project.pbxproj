@@ -14,6 +14,7 @@
 		CC0782BA2C68E0F800427732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC0782B92C68E0F800427732 /* Assets.xcassets */; };
 		CC0782BD2C68E0F800427732 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC0782BB2C68E0F800427732 /* LaunchScreen.storyboard */; };
 		CC4EC4092C69368500890D49 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4EC4082C69368500890D49 /* GameController.swift */; };
+		CC8067402C7E4105001A8E47 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80673F2C7E4105001A8E47 /* Consts.swift */; };
 		CC98BB962C6A3A210070FC01 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC98BB952C6A3A210070FC01 /* Card.swift */; };
 		CC98BB9A2C6A47580070FC01 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC98BB992C6A47580070FC01 /* GameManager.swift */; };
 		CC98BB9C2C6A48F30070FC01 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC98BB9B2C6A48F30070FC01 /* Player.swift */; };
@@ -31,6 +32,7 @@
 		CC0782BC2C68E0F800427732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC0782BE2C68E0F800427732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC4EC4082C69368500890D49 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		CC80673F2C7E4105001A8E47 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		CC98BB952C6A3A210070FC01 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		CC98BB992C6A47580070FC01 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		CC98BB9B2C6A48F30070FC01 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				CC98BB992C6A47580070FC01 /* GameManager.swift */,
 				CC98BB9B2C6A48F30070FC01 /* Player.swift */,
 				CC98BB952C6A3A210070FC01 /* Card.swift */,
+				CC80673F2C7E4105001A8E47 /* Consts.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCAB9D8C2C6901EC00BEE835 /* MyExtentions.swift in Sources */,
+				CC8067402C7E4105001A8E47 /* Consts.swift in Sources */,
 				CC98BB9A2C6A47580070FC01 /* GameManager.swift in Sources */,
 				CC4EC4092C69368500890D49 /* GameController.swift in Sources */,
 				CC0782B52C68E0F700427732 /* ViewController.swift in Sources */,
@@ -329,6 +333,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WarCardGame/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To get your country";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -356,6 +361,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WarCardGame/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To get your country";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

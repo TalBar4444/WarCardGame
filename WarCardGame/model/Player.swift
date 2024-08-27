@@ -2,7 +2,7 @@
 //  Player.swift
 //  WarCardGame
 //
-//  Created by Student31 on 12/08/2024.
+//  Created by Tal Bar on 12/08/2024.
 //
 
 import Foundation

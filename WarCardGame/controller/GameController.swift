@@ -11,13 +11,39 @@ class GameController: UIViewController {
     
     @IBOutlet weak var game_LBL_time: UILabel!
     
+    @IBOutlet weak var game_LBL_rightPlayer: UILabel!
+    
+    @IBOutlet weak var game_LBL_leftPlayer: UILabel!
+    
     var gameManager = GameManager()
+    
+    var rightPlayerCenter: CGPoint = CGPoint()
+    var leftPlayerCenter: CGPoint = CGPoint()
+    var isOver = false
+
 
     var gameTimer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        rightPlayerCenter = game_IMG_rightCard.center
+        leftPlayerCenter = game_IMG_leftCard.center
+        
+        // load the name of the player
         let name = UserDefaults.standard.string(forKey: "name")
+        let _longitude = UserDefaults.standard.double(forKey: "longitude")
+        
+        
+        if _longitude >= CENTER_Y {
+            gameManager.rightPlayer.setName(name: name!)
+            gameManager.leftPlayer.setName(name: "Computer")
+        }else{
+            gameManager.leftPlayer.setName(name: name!)
+            gameManager.rightPlayer.setName(name: "Computer")
+        }
+        
+        updateNameLabels()
         startGame()
     }
     
@@ -28,11 +54,14 @@ class GameController: UIViewController {
         
     func startRound() {
         if gameManager.isGameOver() {
-            endGame()
+            self.endGame()
         }
         
-        gameTimer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats:false) {
-            timer in self.revealCards()
+        if !isOver {
+            gameTimer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats:false) {
+                timer in self.revealCards()
+            }
+            
         }
         
     }
@@ -61,6 +90,11 @@ class GameController: UIViewController {
         startRound()
     }
     
+    func updateNameLabels(){
+           game_LBL_leftPlayer.text = "\(self.gameManager.leftPlayer.name)"
+           game_LBL_rightPlayer.text = "\(self.gameManager.rightPlayer.name)"
+   }
+    
     func updateScoreLabel(){
         game_LBL_leftScore.text = " \(gameManager.leftPlayer.getScore())"
         game_LBL_rightScore.text = " \(gameManager.rightPlayer.getScore())"
@@ -73,11 +107,12 @@ class GameController: UIViewController {
     }
     
     func endGame(){
+        
+        isOver = true
     
         self.dismiss(animated: true, completion: nil)
         self.navigationController?.dismiss(animated: true, completion: nil)
         
-//        performSegue(withIdentifier: "gameOver", sender: self)
         let winner = gameManager.getWinner()
 
         UserDefaults.standard.set(winner.getName(), forKey: "winnerName")
@@ -86,22 +121,5 @@ class GameController: UIViewController {
         if let EndController = storyboard.instantiateViewController(withIdentifier: "EndController") as? EndController {
             self.navigationController?.pushViewController(EndController, animated: true)
         }
-//            .instantiateViewController(withIdentifier: "EndController") as! EndController
-//        self.navigationController?.pushViewController(storyboard, animated: true)
-        
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        if let endController = storyboard.instantiateViewController(withIdentifier: "EndController") as? EndController {
-//            self.present(endController, animated: true, completion: nil)
-//        }
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "gameOver" {
-//            let destinationVC = segue.destination as? EndController
-//            let winner = gameManager.getWinner()
-//            destinationVC?.end_LBL_name = winner.getName().
-//            destinationVC?.end_LBL_score = winner.getScore()
-//
-//        }
-//    }
 }
