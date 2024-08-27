@@ -2,7 +2,11 @@
 
 WarCardGame is a classic card game app where players go head-to-head against the computer in a battle of luck.
 
-https://github.com/TalBar4444/WarCardGame/blob/main/war%20card%20game%20video.mp4
+
+<img src="https://github.com/TalBar4444/WarCardGame/blob/main/img_start.png" width="300">
+<img src="https://github.com/TalBar4444/WarCardGame/blob/main/img_location.png" width="300">
+<img src="https://github.com/TalBar4444/WarCardGame/blob/main/img_game.png" width="300">
+<img src="https://github.com/TalBar4444/WarCardGame/blob/main/img_end.png" width="300">
 
 ## Features
 
