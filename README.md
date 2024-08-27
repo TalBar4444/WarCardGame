@@ -37,7 +37,7 @@ To install and run WarCardGame on your local machine:
 - Once the game begins, cards are drawn automatically, and the game continues until a winner is determined. 
 
 ### Winning the Game
-The game ends when the set number of rounds is over, and the winner is declared.
+- The game ends when the set number of rounds is over, and the winner is declared.
 
 ## App Architecture
 
