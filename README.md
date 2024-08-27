@@ -2,6 +2,8 @@
 
 WarCardGame is a classic card game app where players go head-to-head against the computer in a battle of luck.
 
+https://github.com/TalBar4444/WarCardGame/blob/main/war%20card%20game%20video.mp4
+
 ## Features
 
 - **Location-Based Player Selection**: The player's side is chosen based on their geographic location on Earth.
